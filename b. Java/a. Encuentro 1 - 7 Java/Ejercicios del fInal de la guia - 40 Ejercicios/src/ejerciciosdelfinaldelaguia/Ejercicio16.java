@@ -22,6 +22,8 @@ public class Ejercicio16 {
     int[] vector = new int[n];
     int[] vectorBusqueda = new int[n];
     
+    
+    
     for (int i = 0; i<n; i++) {
         aux = (int)(Math.random()*100);
         vector[i] = aux;
@@ -38,16 +40,23 @@ public class Ejercicio16 {
     
     for (int i = 0; i<n; i++) {
     if (vector[i] == numeroABuscar) {
-    vectorBusqueda[i] = i;
+    vectorBusqueda[contador] = i;
     contador++;
     }
   }
-        
+        if (contador != 0) { 
         System.out.println("El numero " + numeroABuscar + " se encuentra en la(s) posicion(es) " );
-     for (int i = 0; i<contador; i++) {
+        for (int i = 0; i<contador; i++) { 
         System.out.print(vectorBusqueda[i]+ ", ");
     }
-        System.out.println(" Y aparece en total " + contador); 
+        System.out.println(" y aparece en total " + contador + " veces"); 
+        } 
+        else {
+            System.out.println("El numero no se encuentra dentro del vector");
+        
+        }
+        
+      
     
 }
      public static void main(String[] args) {
