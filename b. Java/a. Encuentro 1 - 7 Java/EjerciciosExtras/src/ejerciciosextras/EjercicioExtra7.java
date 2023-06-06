@@ -14,32 +14,80 @@ bucle “while” y otra con el bucle “do - while”. */
 public class EjercicioExtra7 {
 
     public static void encontrarNumerosWhile() {
-        int n, i = 1, num, numeroMayor, numeroMenor, suma=0;
+        int n, i = 0, num, numeroMayor=0, numeroMenor=0;
+        double suma=0;
         Scanner scanner = new Scanner(System.in);
+        
         System.out.println("Ingrese la cantidad de numeros a analizar: ");
         n = scanner.nextInt();
-        System.out.println("Ingrese un numero: ");
-        num = scanner.nextInt(); 
-        numeroMayor = num;
-        numeroMenor = num;
+        
 
-        while (i != n) {
-            suma += num;
+        while (i < n) {
+            System.out.println("Ingrese un numero: ");
+            num = scanner.nextInt();
+            
+            if (i==0) {
+            numeroMayor = num;
+            numeroMenor = num;
+            suma = num;
+            i++;
+            continue;
+            }
+            
             if (numeroMayor < num) {
                 numeroMayor = num;
             }
             if (numeroMenor > num) {
                 numeroMenor = num;
             }
-            System.out.println("Ingrese otro numero: ");
-            num = scanner.nextInt();
+            
+            suma += num;
             i++;
         }
         System.out.println("El numero mayor es: " + numeroMayor);
         System.out.println("El numero menor es: " + numeroMenor);
         System.out.println("El promedio es: " + (suma/n) );
     }
+    
+    public static void ordenarNumerosDoWhile() {
+    int n, i = 0, num, numeroMayor=0, numeroMenor=0;
+        double suma=0;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("INGRESE la cantidad de numeros a analizar: ");
+        n = scanner.nextInt();
+        
+
+        do {
+            System.out.println("Ingrese un numero: ");
+            num = scanner.nextInt();
+            
+            if (i==0) {
+            numeroMayor = num;
+            numeroMenor = num;
+            suma = num;
+            i++;
+            continue;
+            }
+            
+            if (numeroMayor < num) {
+                numeroMayor = num;
+            }
+            if (numeroMenor > num) {
+                numeroMenor = num;
+            }
+            
+            suma += num;
+            i++;
+        } while (i < n);
+        System.out.println("El numero mayor es: " + numeroMayor);
+        System.out.println("El numero menor es: " + numeroMenor);
+        System.out.println("El promedio es: " + (suma/n) );
+    }
+    
+    
     public static void main(String[] args) {
-        encontrarNumerosWhile();
+        // encontrarNumerosWhile();
+        ordenarNumerosDoWhile(); 
     }
 }
