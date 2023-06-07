@@ -20,5 +20,19 @@ al usuario ingresar su respuesta nuevamente. Para realizar este ejercicio invest
 utilizar la función Math.random() de Java.
 */
 public class EjercicioExtra10 {
+     public static void adivinarNumero() {
+     Scanner scanner = new Scanner(System.in);
+     int n,numRandom;
      
+    numRandom = (int) (Math.random()*10);
+         System.out.println(numRandom);
+    do {
+        System.out.println("Ingrese un numero");
+        n = scanner.nextInt();
+    } while (n != numRandom);
+         System.out.println("El numero ingresado coincide con el numero random");
+     }
+     public static void main(String[] args) {
+     adivinarNumero();
+     }
 }
