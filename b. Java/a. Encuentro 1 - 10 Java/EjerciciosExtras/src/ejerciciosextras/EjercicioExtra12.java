@@ -67,7 +67,6 @@ public class EjercicioExtra12 {
     }
    
    public static void main(String[] args) {
-       
         contadorTriple();
     }
 }
