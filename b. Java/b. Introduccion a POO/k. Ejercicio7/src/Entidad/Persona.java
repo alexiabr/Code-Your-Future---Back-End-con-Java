@@ -8,7 +8,7 @@ package Entidad;
 public class Persona {
     private String nombre;
     private int edad;
-    private char genero;
+    private String genero;
     private double peso;
     private double altura; 
     
@@ -18,7 +18,7 @@ public class Persona {
     
     // constructor con todos los atributos
 
-    public Persona(String nombre, int edad, char genero, double peso, double altura) {
+    public Persona(String nombre, int edad, String genero, double peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;
@@ -43,11 +43,11 @@ public class Persona {
         this.edad = edad;
     }
 
-    public char getGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(char genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
