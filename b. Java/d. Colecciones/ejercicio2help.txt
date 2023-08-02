@@ -1,0 +1,20 @@
+System.out.println("Ingrese una raza de perro que desee eliminar de la lista");
+        String razaBorrar = leer.nextLine();
+        Iterator<String> it = razasPerros.iterator();
+        int contador = 0;
+        
+        while (it.hasNext()) {
+            if (it.next().equals(razaBorrar)) {
+                it.remove();
+                contador = contador++;
+            } 
+        }
+        
+        if (contador == 0) {
+            System.out.println("La raza ingresada no estaba en la lista");
+        }
+        
+        System.out.println("La lista quedo asi: ");
+        for (String cadena : razasPerros) {
+                    System.out.println(cadena);
+                }
