@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Entidad">
   <ClassDiagramComponents>
-    <Class name="Equipo" package="Entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="Equipo" package="Entidad" visibility="public" xPosition="52.0" yPosition="115.0">
       <Fields>
         <Field name="jugadores" type="List&lt;Jugador&gt;" visibility="private"/>
       </Fields>
@@ -15,7 +15,7 @@
         <Method name="mostrarJugadores" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Jugador" package="Entidad" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="Jugador" package="Entidad" visibility="public" xPosition="619.0" yPosition="74.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -53,7 +53,7 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="Entidad.Equipo" target="Entidad.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="jugadores" source="Entidad.Equipo" target="Entidad.Jugador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Jugador&gt;"/>
+    <UseRelation source="Entidad.Equipo" target="Entidad.Jugador" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
