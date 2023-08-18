@@ -30,8 +30,8 @@ public class Revolver {
 
     // metodos
     public void llenarRevolver() {
-        setPosicionActual((int) (Math.random() * 6));
-        setPosicionAgua((int) (Math.random() * 6));
+        setPosicionActual((int) (Math.random() * 5));
+        setPosicionAgua((int) (Math.random() * 5));
     }
     
     public boolean mojar () {
@@ -41,10 +41,10 @@ public class Revolver {
     }
     
     public void siguienteChorro() {
-        if (posicionActual == 6) {
-            setPosicionActual(1);
+        if (posicionActual == 5) {
+            setPosicionActual(0);
         } else
-        setPosicionActual(posicionActual+1);
+        setPosicionActual(getPosicionActual()+1);
     }
     
     @Override

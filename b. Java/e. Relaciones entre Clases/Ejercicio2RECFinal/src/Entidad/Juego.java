@@ -16,25 +16,43 @@ import java.util.ArrayList;
  * usando los atributos de la clase Juego.
  */
 public class Juego {
-    
+
     private ArrayList<Jugador> jugadores = new ArrayList();
     private Revolver r;
-    
+
     public Juego() {
     }
-    
+
     public void llenarJuego(ArrayList<Jugador> jugadores, Revolver r) {
         this.jugadores = jugadores;
         this.r = r;
     }
-    
+
     public void ronda() {
+        int v = 0;
         for (Jugador j : jugadores) {
-            System.out.println("hola");
-           boolean disparo = j.disparo(r);
-           if (disparo) { 
-                System.out.println(j);
-           break;}
+            System.out.println("vuelta " + v);
+            v++;
+            if (j.disparo(r)) {
+                jugadores.get(r.getPosicionActual()).setMojado(true);
+                System.out.println("El jugador que se mojo es: ");
+                System.out.println(jugadores.get(r.getPosicionAgua()));
+                break;
+            } else
+                System.out.println("El " + j.getNombre() + " no se mojo");
         }
     }
+
+    /*
+    public void ronda() {
+        int v = 1;
+        for (Jugador j : jugadores) {
+            System.out.println("vuelta " + v);
+           boolean disparo = j.disparo(r);
+           v++;
+           if (disparo) { 
+                System.out.println();
+           break;}
+        }
+    }*/
 }

@@ -24,6 +24,8 @@ public class Ejercicio2RECFinal {
         Jugador j2 = js.crearJugador();
         Jugador j3 = js.crearJugador();
         Jugador j4 = js.crearJugador();
+        Jugador j5 = js.crearJugador();
+        Jugador j6 = js.crearJugador();
         js.mostrarJugadores();
         Juego nuevoJuego = new Juego();
         System.out.println(revolver);
@@ -31,6 +33,7 @@ public class Ejercicio2RECFinal {
         System.out.println(revolver);
         nuevoJuego.llenarJuego(js.getJugadores(), revolver);
         nuevoJuego.ronda();
+        System.out.println("Resultado final: ");
         js.mostrarJugadores();
     }
     

@@ -39,7 +39,6 @@ public class Jugador {
 
     public boolean disparo(Revolver r) {
         if (r.mojar()) {
-            setMojado(true);
             return true;
         } else {
             r.siguienteChorro();
