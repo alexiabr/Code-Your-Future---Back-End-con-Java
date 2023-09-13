@@ -2,6 +2,7 @@
 package ejercicio3;
 
 import Entidad.Alumno;
+import Service.AlumnoService;
 import java.util.Scanner;
 
 /**
@@ -26,12 +27,12 @@ del método se usará la lista notas para calcular el promedio final de alumno. 
 promedio final, devuelto por el método y mostrado en el main
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        AlumnoService as = new AlumnoService();
+       as.agregarNuevoAlumno();
+       as.agregarNuevoAlumno();
+       as.agregarNuevoAlumno();
+       as.mostrarAlumnos();
+        
     }
-    Scanner scanner = new Scanner(System.in);
-    public Alumno crearAlumno() {
-        System.out.println("Ingrese el nombre del alumno");
-        String nombre = scanner.nextLine();
-        return new Alumno(nombre);
-    }
+    
 }

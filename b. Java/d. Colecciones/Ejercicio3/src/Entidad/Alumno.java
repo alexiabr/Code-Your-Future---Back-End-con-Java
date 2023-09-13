@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Alumno {
     private String nombre;
-    private ArrayList<Integer> notas = new ArrayList();
+    private ArrayList<Double> notas = new ArrayList();
 
     public Alumno() {
     }
@@ -31,12 +31,17 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public ArrayList<Integer> getNotas() {
+    public ArrayList<Double> getNotas() {
         return notas;
     }
 
-    public void setNotas(ArrayList<Integer> notas) {
+    public void setNotas(ArrayList<Double> notas) {
         this.notas = notas;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno{" + "nombre=" + nombre + ", notas=" + notas + '}';
     }
     
     
