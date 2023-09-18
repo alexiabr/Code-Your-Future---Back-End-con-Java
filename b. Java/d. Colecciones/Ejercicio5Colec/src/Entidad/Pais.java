@@ -5,23 +5,19 @@
  */
 package Entidad;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Luciana
  */
-public class Alumno {
+public class Pais {
     private String nombre;
-    private ArrayList<Double> notas = new ArrayList();
 
-    public Alumno() {
+    public Pais() {
     }
 
-    public Alumno(String nombre) {
+    public Pais(String nombre) {
         this.nombre = nombre;
     }
-    
 
     public String getNombre() {
         return nombre;
@@ -31,17 +27,9 @@ public class Alumno {
         this.nombre = nombre;
     }
 
-    public ArrayList<Double> getNotas() {
-        return notas;
-    }
-
-    public void setNotas(ArrayList<Double> notas) {
-        this.notas = notas;
-    }
-
     @Override
     public String toString() {
-        return "Alumno{" + "nombre=" + nombre + ", notas=" + notas + '}';
+        return "Pais{" + "nombre=" + nombre + '}';
     }
     
     
